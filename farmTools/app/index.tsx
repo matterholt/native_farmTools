@@ -1,5 +1,7 @@
 import { Text, View } from "react-native";
-import { Stack, Link } from "expo-router";
+
+import InternalLink from "./components/general/InternalLink";
+import SectionHeader from "./components/general/SectionHeader";
 
 export default function Index() {
   return (
@@ -10,51 +12,16 @@ export default function Index() {
         padding: 50,
       }}
     >
-      <Text>Daily Farm Tools</Text>
-      <Link href="/PearsonSquare">
-        <Text
-          style={{
-            color: "#007AFF",
-            fontSize: 18,
-            fontWeight: "bold",
-          }}
-        >
-          Pearson Square
-        </Text>
-      </Link>
-      <Link href="/Gestation">
-        <Text
-          style={{
-            color: "#007AFF",
-            fontSize: 18,
-            fontWeight: "bold",
-          }}
-        >
-          Gestation Cycles
-        </Text>
-      </Link>
-      <Link href="/AuctionTracker">
-        <Text
-          style={{
-            color: "#007AFF",
-            fontSize: 18,
-            fontWeight: "bold",
-          }}
-        >
-          Auction Tracker
-        </Text>
-      </Link>
-      <Link href="/WeightEstimator">
-        <Text
-          style={{
-            color: "#007AFF",
-            fontSize: 18,
-            fontWeight: "bold",
-          }}
-        >
-          Weight Estimator
-        </Text>
-      </Link>
+      <SectionHeader>Daily Farm Tools</SectionHeader>
+
+      <InternalLink linkTo="/PearsonSquare">
+        Pearson Square Calculator
+      </InternalLink>
+      <InternalLink linkTo="/Gestation">Ewe Gestation</InternalLink>
+      <InternalLink linkTo="/AuctionTracker">Sold At Auction</InternalLink>
+      <InternalLink linkTo="/WeightEstimator">
+        Lamb Weight Estimate
+      </InternalLink>
     </View>
   );
 }
