@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet, TextInput, ScrollView } from "react-native";
 import { Image } from "expo-image";
 
-import { Picker } from "@react-native-picker/picker";
-
 import LengthInput from "./components/features/weightEstimator/LengthInput";
 
 export default function WeightEstimator() {
@@ -45,7 +43,6 @@ export default function WeightEstimator() {
           </Text>
           <View style={{ flexDirection: "column", flex: 1 }}>
             <Text>Body Length</Text>
-            <LengthInput />
           </View>
         </View>
       </View>
